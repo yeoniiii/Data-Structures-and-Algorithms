@@ -181,3 +181,22 @@ from pythonds.basic.queue import Queue
 
 Q = Queue()
 dir(Q) # 큐의 정의된 연산 확인
+
+
+from collections import deque
+dir(deque)
+#### 'append',
+#### 'appendleft',
+#### 'clear',
+#### 'copy',
+#### 'count',
+#### 'extend',
+#### 'extendleft',
+#### 'index',
+#### 'insert',
+#### 'maxlen',
+#### 'pop',
+#### 'popleft',
+#### 'remove',
+#### 'reverse',
+#### 'rotate'
