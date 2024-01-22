@@ -20,6 +20,7 @@ Data-Structures-and-Algorithms-Study
 │   └── 16_Priority_Queues.py
 │
 ├── 이것이 코딩 테스트다
+│   └── 6_정렬.py
 │
 └── README.md
 ```
