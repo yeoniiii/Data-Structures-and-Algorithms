@@ -79,7 +79,7 @@ else:
 
 
 
-# [실전 문제] 부품 찾기
+# [실전 문제] 부품 찾기 --------------------------------
 ## 내 코드 (반복문)
 N = int(input())
 dong = sorted(list(map(int, input().split())))
@@ -136,7 +136,7 @@ for i in cust:
         print('no', end = ' ')
 
 
-# [실전 문제] 떡볶이 떡 만들기
+# [실전 문제] 떡볶이 떡 만들기 --------------------------------
 ## 내 코드
 N, M = map(int, input().split())
 arr = sorted(list(map(int, input().split())))
@@ -187,3 +187,106 @@ while(start <= end):
 
 # 정답 출력
 print(result)
+
+
+# [백준] 1920 수 찾기 --------------------------------
+N = int(input())
+A = sorted(list(map(int, input().split())))
+M = int(input())
+B = list(map(int, input().split()))
+
+def binary_search(arr, n):
+    start, end = 0, len(arr)-1
+    while start <= end:
+        mid = (start + end) // 2
+        if arr[mid] == n:
+            return 1
+        elif arr[mid] < n:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return 0
+
+for b in B:
+    print(binary_search(A, b))
+
+
+## [백준] 10816 숫자카드 2 --------------------------------
+N = int(input())
+sang = sorted(list(map(int, input().split())))
+M = int(input())
+card = list(map(int, input().split()))
+
+sang_dict = {}
+for s in sang:
+    if s in sang_dict:
+        sang_dict[s] += 1
+    else:
+        sang_dict[s] = 1
+
+def num_card(arr, n, start, end):
+    if start > end:
+        return 0
+    
+    mid = (start + end) // 2
+    if arr[mid] == n:
+        return sang_dict[n]
+    elif arr[mid] < n:
+        return num_card(arr, n, mid+1, end)
+    else: # arr_set[mid] > n
+        return num_card(arr, n, start, mid-1)
+
+ans = []
+for c in card:
+    ans.append(num_card(sang, c, 0, len(sang)-1))
+
+print(*ans)
+
+
+## [백준] 1654 랜선 자르기 --------------------------------
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+K, N = map(int, input().split())
+arr = sorted([int(input()) for _ in range(K)])
+
+def max_len(arr, n):
+    start, end = 1, max(arr)      # 길이이므로 [1, max(arr)]
+    
+    while start <= end:           # start > end 되면 멈춤
+        mid = (start + end) // 2
+        num = 0
+        for i in arr:
+            num += i // mid       # i랑 mid 대소관계 체크할 필요 없음 (몫이니까)
+                
+        if num >= n:              # (1) 개수가 N개보다 많거나 같으면 최대 길이를 알아내기 위해 개수를 줄여야 함
+            start = mid + 1       # -> 나눠주는 수인 mid를 키워야 함
+        else: # num < n           # (2) 개수가 N개보다 적으면 개수를 늘려야 함
+            end = mid - 1         # -> 나눠주는 수인 mid를 줄여야 함
+    return end                    # ∴ end가 N개를 만들 수 있는 최대 길이
+
+print(max_len(arr, N))
+
+
+## [백준] 2805 나무 자르기 --------------------------------
+N, M = map(int, input().split())
+arr = sorted(list(map(int, input().split())))
+
+def max_len(arr, n):
+    start, end = 1, max(arr)
+    
+    while start <= end:
+        mid = (start + end) // 2
+        l = 0
+   
+        for a in arr:
+            if a > mid:
+                l += (a-mid)
+        if l >= M:    
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    return end
+
+print(max_len(arr, M))
