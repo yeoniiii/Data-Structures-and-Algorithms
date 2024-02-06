@@ -7,4 +7,4 @@
 - 공부 기록
   - [6. 정렬 Sort](https://wistful-soap-d03.notion.site/6-6a57d638a04c4a5fb0aab7cc434389a1?pvs=4)
   - [7. 이진 탐색 Binary Sort](https://wistful-soap-d03.notion.site/7-fbaf38d2273d4df1bd4114ebee4c7cca?pvs=4)
-  - [3. 그리디 Greedy](https://wistful-soap-d03.notion.site/3-08bff1547a2c462ba215a9453cfb6182?pvs=4)https://wistful-soap-d03.notion.site/3-08bff1547a2c462ba215a9453cfb6182?pvs=4
+  - [3. 그리디 Greedy](https://wistful-soap-d03.notion.site/3-08bff1547a2c462ba215a9453cfb6182?pvs=4)
