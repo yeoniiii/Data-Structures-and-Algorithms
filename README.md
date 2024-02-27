@@ -26,7 +26,8 @@ Data-Structures-and-Algorithms-Study
 │   ├── 4_구현.py
 │   ├── 5_DFS+BFS.py
 │   ├── 6_정렬.py
-│   └── 7_이진탐색.py
+│   ├── 7_이진탐색.py
+│   └── 8_다이나믹프로그래밍.py
 │
 └── README.md
 ```
