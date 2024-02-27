@@ -10,3 +10,4 @@
   - [5. 탐색 DFS/BFS](https://wistful-soap-d03.notion.site/5-DFS-BFS-2ee141b04b8644ae8ddf880401de04bd?pvs=4)
   - [6. 정렬 Sort](https://wistful-soap-d03.notion.site/6-6a57d638a04c4a5fb0aab7cc434389a1?pvs=4)
   - [7. 이진 탐색 Binary Sort](https://wistful-soap-d03.notion.site/7-fbaf38d2273d4df1bd4114ebee4c7cca?pvs=4)
+  - [8. 다이나믹 프로그래밍 Dynamic Programming](https://wistful-soap-d03.notion.site/8-ff86ba947b8e4ce4ba7f4c208c7f7203?pvs=4)
